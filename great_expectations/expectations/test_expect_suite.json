@@ -1,0 +1,101 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "expectation_test",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_column_count_to_equal",
+      "kwargs": {
+        "value": 13
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "max_value": 1000,
+        "min_value": 1
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "employee_id",
+          "first_name",
+          "last_name",
+          "email",
+          "phone_number",
+          "hire_date",
+          "job_id",
+          "salary",
+          "manager_id",
+          "department_id",
+          "elt_ts",
+          "elt_by",
+          "file_name"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_compound_columns_to_be_unique",
+      "kwargs": {
+        "column_list": [
+          "employee_id",
+          "email",
+          "phone_number"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_unique",
+      "kwargs": {
+        "column": "employee_id"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "elt_ts",
+        "max_value": "2023-02-06 04:21:14.674",
+        "min_value": "2023-02-05 04:21:14.674"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "salary",
+        "strict_min": 0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "employee_id",
+        "type_": "int"
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "citations": [
+      {
+        "batch_request": {
+          "data_asset_name": "my_schema.employees",
+          "data_connector_name": "default_inferred_data_connector_name",
+          "datasource_name": "my_datasource_new",
+          "limit": 1000
+        },
+        "citation_date": "2023-02-22T15:03:19.595221Z",
+        "comment": "Created suite added via CLI"
+      }
+    ],
+    "great_expectations_version": "0.15.48"
+  }
+}%
